@@ -39,7 +39,7 @@ As máquinas foram configuradas utilizando Host-Only Network no VirtualBox para 
 Máquina atacante
 Sistema operacional:
 Kali Linux
-![Ataque FTP](images/Ambiente_Kali.PNG)
+![Ambiente_Kali](images/Ambiente_Kali.PNG)
 
 Ferramentas utilizadas:
 - Medusa
@@ -50,7 +50,7 @@ Ferramentas utilizadas:
 Máquina vulnerável
 Sistema operacional:
 Metasploitable 2
-![Ataque FTP](images/Ambiente_Metasploit2.PNG)
+![Ambiente_Metasploit(images/Ambiente_Metasploit2.PNG)
 
 Serviços explorados:
 - FTP
@@ -97,8 +97,10 @@ Essa ferramenta permite identificar:
 🔑 Criação da Wordlist de Usuário
 
 A lista de usuários foi baseada nas informações obtidas durante a fase de enumeração com enum4linux.
+- [Lista de usuários](wordlists/smb_users.txt)
 
 Para organizar os usuários identificados, foi criado um arquivo chamado smb_users.txt contendo os possíveis usuários do sistema.
+Esse arquivo será utilizado posteriormente pela ferramenta Medusa para testar autenticação nos serviços disponíveis.
 
 Exemplo de conteúdo do arquivo:
 
@@ -108,11 +110,10 @@ Exemplo de conteúdo do arquivo:
 - service
 - root
 
-Esse arquivo será utilizado posteriormente pela ferramenta Medusa para testar autenticação nos serviços disponíveis.
-
 🔑 Criação da Wordlist de Senhas
 
 Também foi criada uma wordlist simples contendo senhas comuns, frequentemente utilizadas em ataques de força bruta para testar sistemas com configurações fracas de segurança.
+- [Lista de senhas](wordlists/passwordsList.txt)
 
 Exemplo do arquivo passwordList.txt:
 
@@ -137,7 +138,7 @@ Ferramenta utilizada:
 Comando utilizado:
 `medusa -h 192.168.48.4 -U smb_users.txt -P passwordList.txt -M ftp`
 
-![medusa](images/Comando_Medusa.PNG)
+![medusaFTP](images/Comando_Medusa.PNG)
 
 👊 Ataque de Força Bruta em HTTP
 
@@ -148,7 +149,7 @@ Comandos utilizado:
 - `-m DENY:"Login failed" \`
 - `-t 6`
 
-![medusa](images/Comando_Medusa_HTTP.PNG)
+![medusaHTTP](images/Comando_Medusa_HTTP.PNG)
 
 🛡️ Medidas de Mitigação
 
