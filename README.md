@@ -50,7 +50,7 @@ Ferramentas utilizadas:
 Máquina vulnerável
 Sistema operacional:
 Metasploitable 2
-![Ambiente_Metasploit(images/Ambiente_Metasploit2.PNG)
+![Ambiente_Metasploit](images/Ambiente_Metasploit2.PNG)
 
 Serviços explorados:
 - FTP
