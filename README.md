@@ -148,7 +148,7 @@ Comandos utilizado:
 - `-m DENY:"Login failed" \`
 - `-t 6`
 
-![medusa](images/Comando_Medusa.PNG)
+![medusa](images/Comando_Medusa_HTTP.PNG)
 
 🛡️ Medidas de Mitigação
 
